@@ -1,6 +1,8 @@
 import { useState, Fragment } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
+//import { Button } from 'antd/lib/button'
+import { Button } from 'antd'
 
 const LOGIN = gql`
   mutation Login($mail: String!, $password: String!) {
@@ -37,14 +39,13 @@ const Login = () => {
         }}
       >
         {login => (
-          <button
-            variant="contained"
+          <Button
             onClick={() => {
               login({ variables: values })
             }}
           >
             Login
-          </button>
+          </Button>
         )}
       </Mutation>
     </Fragment>

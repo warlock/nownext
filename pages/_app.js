@@ -1,7 +1,7 @@
 import App, { Container } from 'next/app'
 import withApolloClient from '../lib/with-apollo-client'
 import { ApolloProvider } from 'react-apollo'
-import { SessionControl } from './context/Context'
+import { SessionControl } from '../context/context'
 
 class MyApp extends App {
   state = {
